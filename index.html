@@ -4,214 +4,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090914">
 <title>For Savanna Yoell ♡</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --pink:#ff77b7;
-  --light:#ffd4e8;
-  --purple:#b9a0ff;
-  --night:#090914;
-  --panel:#151326;
-  --white:#fff4fa;
-  --muted:#c6bdd7;
+:root{
+--pink:#ff77b7;--light:#ffd4e8;--purple:#b9a0ff;
+--night:#090914;--panel:#151326;--white:#fff4fa;--muted:#c6bdd7;
 }
-* {box-sizing:border-box}
-html {scroll-behavior:smooth}
-body {
-  margin:0;background:var(--night);color:var(--white);
-  font-family:'DM Sans',sans-serif;overflow-x:hidden;
-}
-body::before {
-  content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
-  background:
-    radial-gradient(ellipse at 15% 5%,#56264c55,transparent 45%),
-    radial-gradient(ellipse at 85% 40%,#30236544,transparent 50%),
-    radial-gradient(ellipse at 40% 100%,#62264833,transparent 45%);
-}
-a {color:inherit}
-button {font:inherit;cursor:pointer}
-h1,h2,h3,p {margin-top:0}
-h1,h2 {font-family:'Playfair Display',serif}
-h2 {font-size:clamp(1.7rem,4vw,2.6rem)}
-p {line-height:1.8;color:var(--muted)}
-::selection {background:var(--pink);color:#180b19}
-#stars {position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
-
-nav {
-  position:sticky;top:0;z-index:20;display:flex;align-items:center;
-  justify-content:space-between;gap:18px;padding:15px 5%;
-  background:#090914dc;backdrop-filter:blur(18px);
-  border-bottom:1px solid #ff77b72b;
-}
-.brand {font-family:'Caveat',cursive;font-size:1.7rem;color:var(--pink);white-space:nowrap}
-.navlinks {display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
-.navlinks a {font-size:.78rem;text-decoration:none;color:var(--muted)}
-.navlinks a:hover {color:var(--pink)}
-.pill {
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:12px 19px;border-radius:30px;border:1px solid var(--pink);
-  color:var(--white);background:#ff77b715;text-decoration:none;
-  transition:.25s;
-}
-.pill:hover {background:var(--pink);color:#210c1a;transform:translateY(-2px)}
-.pink {background:var(--pink);color:#200b1b;font-weight:700}
-.wrap {width:min(1120px,90%);margin:auto}
-section {padding:90px 0;scroll-margin-top:75px}
-.eyebrow {color:var(--pink);letter-spacing:3px;font-size:.72rem;text-transform:uppercase}
-.heading {margin-bottom:32px}
-.heading p {max-width:620px}
-.script {font-family:'Caveat',cursive;color:var(--pink)}
-.card {
-  background:linear-gradient(140deg,#1b172eeb,#100f20f5);
-  border:1px solid #ffb8df25;border-radius:24px;padding:26px;
-  box-shadow:0 15px 60px #0003;
-}
-.grid {display:grid;gap:22px}
-.two {grid-template-columns:repeat(2,minmax(0,1fr))}
-.three {grid-template-columns:repeat(3,minmax(0,1fr))}
-.hero {
-  min-height:85vh;display:grid;place-items:center;text-align:center;
-  padding:75px 5% 100px;position:relative;
-}
-.hero-inner {max-width:900px}
-.orbit {
-  margin:0 auto 25px;width:115px;height:115px;border:1px solid #ff77b788;
-  border-radius:50%;display:grid;place-items:center;position:relative;
-  box-shadow:0 0 45px #ff77b722,inset 0 0 35px #ff77b718;
-  animation:float 4s ease-in-out infinite;
-}
-.orbit::before,.orbit::after {
-  content:"";position:absolute;inset:-12px;border:1px solid #b9a0ff55;
-  border-radius:50%;transform:rotate(-30deg) scaleY(.45);
-}
-.orbit::after {transform:rotate(35deg) scaleY(.45);border-color:#ff77b788}
-.orbit span {font-size:3rem;color:var(--pink)}
-.hero h1 {
-  font-size:clamp(3.1rem,9vw,7.4rem);line-height:1.03;margin:20px 0;
-  letter-spacing:-3px;
-}
-.hero h1 em {color:var(--pink);font-weight:600}
-.hero .intro {max-width:620px;margin:0 auto 28px;font-size:1.05rem}
-.hero-actions {display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.scroll-note {margin-top:65px;font-size:.75rem;letter-spacing:3px;color:#a99bbd}
-.scroll-note span {display:block;font-size:1.5rem;color:var(--pink);animation:bob 1.5s infinite}
-
-.ticker {overflow:hidden;border-block:1px solid #ff77b733;padding:15px 0;white-space:nowrap}
-.ticker-track {display:inline-block;animation:marquee 25s linear infinite;color:var(--pink);font-family:'Caveat',cursive;font-size:1.5rem}
-.ticker-track span {margin:0 28px}
-
-.letter {position:relative;overflow:hidden}
-.letter::after {
-  content:"♡";position:absolute;right:20px;bottom:-30px;
-  font-family:'Caveat',cursive;font-size:9rem;color:#ff77b70c;
-}
-.letter-text {font-family:'Caveat',cursive;font-size:1.4rem;color:#f5dce9;line-height:1.8}
-.signature {font-family:'Caveat',cursive;font-size:2rem;color:var(--pink)}
-.secret {display:none;margin-top:20px;padding:20px;border-radius:15px;background:#ff77b710;border:1px dashed #ff77b777}
-.secret.show {display:block;animation:appear .5s ease}
-.secret p {margin-bottom:0}
-
-.photo-grid {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
-.photo {
-  padding:7px 7px 13px;background:#fff1f7;border-radius:5px;
-  color:#20121b;transform:rotate(var(--tilt,-2deg));transition:.3s;
-  cursor:pointer;min-width:0;
-}
-.photo:nth-child(even) {--tilt:2deg}
-.photo:hover {transform:rotate(0) translateY(-8px) scale(1.035);z-index:2}
-.photo img {display:block;width:100%;aspect-ratio:3/4;object-fit:cover;background:#2b2037}
-.photo .caption {font-family:'Caveat',cursive;text-align:center;padding-top:9px;font-size:1.1rem}
-.photo .placeholder {
-  aspect-ratio:3/4;display:grid;place-items:center;text-align:center;
-  padding:8px;background:linear-gradient(145deg,#3c2644,#17172e);
-  color:#ffb7dc;font-family:'Caveat',cursive;font-size:1.3rem;
-}
-.gallery-note {font-size:.8rem;margin-top:18px}
-#lightbox {
-  display:none;position:fixed;inset:0;z-index:100;background:#05040def;
-  align-items:center;justify-content:center;padding:20px;flex-direction:column;gap:12px;
-}
-#lightbox.open {display:flex}
-#lightbox img {max-width:min(90vw,700px);max-height:75vh;object-fit:contain}
-#lightbox button {border:0;background:var(--pink);padding:10px 18px;border-radius:25px}
-
-.stat {text-align:center;padding:30px 15px}
-.stat strong {display:block;font-family:'Playfair Display',serif;font-size:2.7rem;color:var(--pink)}
-.stat span {font-size:.85rem;color:var(--muted)}
-.heart-button {font-size:1.5rem;background:none;border:0;color:var(--pink)}
-.heart-button:active {transform:scale(1.5)}
-.meter {height:10px;background:#ffffff12;border-radius:10px;overflow:hidden;margin:18px 0}
-.meter-fill {height:100%;width:100%;background:linear-gradient(90deg,var(--purple),var(--pink));border-radius:10px}
-.meter-caption {font-size:.8rem}
-.song-art {
-  width:100%;aspect-ratio:1;max-width:260px;border-radius:20px;
-  background:radial-gradient(circle at 35% 30%,#ffb4d6,#a17ad7 35%,#262048 70%);
-  display:grid;place-items:center;font-size:5rem;margin:auto;
-  box-shadow:0 15px 60px #ff77b725;
-}
-.song-content {text-align:center}
-.equalizer {display:flex;justify-content:center;gap:5px;height:28px;align-items:end;margin:20px}
-.equalizer span {width:5px;height:10px;border-radius:5px;background:var(--pink)}
-.equalizer.playing span {animation:equal .6s ease-in-out infinite alternate}
-.equalizer span:nth-child(2n) {animation-delay:.2s}
-.equalizer span:nth-child(3n) {animation-delay:.4s}
-.song-link {margin-top:10px}
-
-.game {border-color:#ff77b777}
-.game-buttons {display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:25px 0}
-.game-button {
-  min-width:125px;padding:14px 22px;border:1px solid var(--pink);
-  border-radius:15px;background:#ff77b713;color:var(--white);font-weight:700;
-  transition:transform .15s,background .2s;
-}
-.game-button:hover {background:#ff77b733}
-#savanna-btn {position:relative}
-#game-message {min-height:48px;text-align:center;color:var(--pink);font-family:'Caveat',cursive;font-size:1.5rem}
-#rage-score {text-align:center;font-size:.8rem;color:var(--muted)}
-
-.timeline {border-left:1px solid #ff77b766;margin-left:8px;padding-left:25px}
-.timeline-item {position:relative;padding:0 0 25px}
-.timeline-item::before {
-  content:"♡";position:absolute;left:-37px;top:0;color:var(--pink);
-  background:var(--night);font-size:1.1rem;
-}
-.timeline-item h3 {margin-bottom:6px;color:var(--pink);font-size:1rem}
-.timeline-item p {margin-bottom:0;font-size:.9rem}
-
-.promise {text-align:center}
-.promise .big-heart {font-size:4rem;color:var(--pink);animation:beat 1.5s infinite}
-#promise-text {min-height:60px;font-family:'Caveat',cursive;font-size:1.8rem;color:var(--light)}
-footer {text-align:center;padding:35px 20px;border-top:1px solid #ff77b725;color:var(--muted);font-size:.8rem}
-footer .script {font-size:1.5rem}
-#top {position:fixed;bottom:20px;right:20px;z-index:15;width:45px;height:45px;border-radius:50%;border:1px solid #ff77b777;background:#151326dd;color:var(--pink);font-size:1.3rem}
-.floating-heart {
-  position:fixed;z-index:99;pointer-events:none;color:var(--pink);
-  animation:rise 1.6s ease-out forwards;
-}
-@keyframes float {50%{transform:translateY(-10px)}}
-@keyframes bob {50%{transform:translateY(7px)}}
-@keyframes beat {50%{transform:scale(1.13)}}
-@keyframes appear {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@keyframes rise {to{transform:translateY(-140px) rotate(25deg);opacity:0}}
-@keyframes marquee {to{transform:translateX(-50%)}}
-@keyframes equal {to{height:27px}}
-@media(max-width:850px) {
-  nav {align-items:flex-start;flex-direction:column;gap:10px}
-  .navlinks {justify-content:flex-start;gap:13px}
-  .photo-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
-  .three {grid-template-columns:1fr}
-}
-@media(max-width:560px) {
-  section {padding:60px 0}
-  .two {grid-template-columns:1fr}
-  .photo-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
-  .hero h1 {letter-spacing:-1px}
-  .card {padding:20px}
-}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 15% 5%,#56264c55,transparent 45%),radial-gradient(ellipse at 85% 40%,#30236544,transparent 50%),radial-gradient(ellipse at 40% 100%,#62264833,transparent 45%)}
+#stars{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+h1,h2{font-family:'Playfair Display',serif}
+h2{font-size:clamp(1.7rem,4vw,2.6rem)}
+p{line-height:1.8;color:var(--muted)}
+button{font:inherit;cursor:pointer}
+a{color:inherit}
+::selection{background:var(--pink);color:#180b19}
+nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 5%;background:#090914e8;backdrop-filter:blur(18px);border-bottom:1px solid #ff77b72b}
+.brand{font-family:'Caveat',cursive;font-size:1.7rem;color:var(--pink);white-space:nowrap;text-decoration:none}
+.navlinks{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.navlinks a{font-size:.78rem;text-decoration:none;color:var(--muted)}
+.navlinks a:hover{color:var(--pink)}
+.wrap{width:min(1120px,90%);margin:auto}
+section{padding:85px 0;scroll-margin-top:90px}
+.eyebrow{color:var(--pink);letter-spacing:3px;font-size:.72rem;text-transform:uppercase}
+.heading{margin-bottom:32px}
+.heading p{max-width:650px}
+.script{font-family:'Caveat',cursive;color:var(--pink)}
+.card{background:linear-gradient(140deg,#1b172eeb,#100f20f5);border:1px solid #ffb8df25;border-radius:24px;padding:26px;box-shadow:0 15px 60px #0003}
+.grid{display:grid;gap:22px}
+.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 19px;border-radius:30px;border:1px solid var(--pink);color:var(--white);background:#ff77b715;text-decoration:none;transition:.25s}
+.pill:hover{background:var(--pink);color:#210c1a;transform:translateY(-2px)}
+.pink{background:var(--pink);color:#200b1b;font-weight:700}
+.hero{min-height:85vh;display:grid;place-items:center;text-align:center;padding:75px 5% 100px}
+.hero-inner{max-width:900px}
+.orbit{margin:0 auto 25px;width:115px;height:115px;border:1px solid #ff77b788;border-radius:50%;display:grid;place-items:center;position:relative;box-shadow:0 0 45px #ff77b722;animation:float 4s ease-in-out infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:-12px;border:1px solid #b9a0ff55;border-radius:50%;transform:rotate(-30deg) scaleY(.45)}
+.orbit:after{transform:rotate(35deg) scaleY(.45);border-color:#ff77b788}
+.orbit span{font-size:3rem;color:var(--pink)}
+.hero h1{font-size:clamp(3rem,9vw,7.4rem);line-height:1.05;margin:20px 0;letter-spacing:-2px}
+.hero h1 em{color:var(--pink)}
+.intro{max-width:650px;margin:0 auto 28px;font-size:1.05rem}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.scroll-note{margin-top:55px;font-size:.75rem;letter-spacing:3px;color:#a99bbd}
+.scroll-note span{display:block;font-size:1.5rem;color:var(--pink);animation:bob 1.5s infinite}
+.ticker{overflow:hidden;border-block:1px solid #ff77b733;padding:15px 0;white-space:nowrap}
+.ticker-track{display:inline-block;animation:marquee 28s linear infinite;color:var(--pink);font-family:'Caveat',cursive;font-size:1.5rem}
+.ticker-track span{margin:0 28px}
+.letter-text{font-family:'Caveat',cursive;font-size:1.4rem;color:#f5dce9;line-height:1.8}
+.signature{font-family:'Caveat',cursive;font-size:2rem;color:var(--pink)}
+.secret{display:none;margin-top:20px;padding:20px;border-radius:15px;background:#ff77b710;border:1px dashed #ff77b777}
+.secret.show{display:block;animation:appear .5s ease}
+.photo-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+.photo{padding:7px 7px 13px;background:#fff1f7;border-radius:5px;color:#20121b;transform:rotate(var(--tilt,-2deg));transition:.3s;cursor:pointer;min-width:0}
+.photo:nth-child(even){--tilt:2deg}
+.photo:hover{transform:rotate(0) translateY(-8px) scale(1.035);z-index:2}
+.photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;background:#2b2037}
+.photo .caption{font-family:'Caveat',cursive;text-align:center;padding-top:9px;font-size:1.1rem}
+.photo .placeholder{aspect-ratio:3/4;display:grid;place-items:center;text-align:center;padding:8px;background:linear-gradient(145deg,#3c2644,#17172e);color:#ffb7dc;font-family:'Caveat',cursive;font-size:1.3rem}
+.gallery-note{font-size:.85rem;margin-top:18px}
+#lightbox{display:none;position:fixed;inset:0;z-index:100;background:#05040def;align-items:center;justify-content:center;padding:20px;flex-direction:column;gap:12px}
+#lightbox.open{display:flex}
+#lightbox img{max-width:90vw;max-height:75vh;object-fit:contain}
+#lightbox button{border:0;background:var(--pink);padding:10px 18px;border-radius:25px}
+.stat{text-align:center;padding:30px 15px}
+.stat strong{display:block;font-family:'Playfair Display',serif;font-size:2.7rem;color:var(--pink)}
+.stat span{font-size:.85rem;color:var(--muted)}
+.heart-button{font-size:1.8rem;background:none;border:0;color:var(--pink)}
+.meter{height:10px;background:#ffffff12;border-radius:10px;overflow:hidden;margin:18px 0}
+.meter-fill{height:100%;width:100%;background:linear-gradient(90deg,var(--purple),var(--pink));border-radius:10px}
+.song-art{width:100%;aspect-ratio:1;max-width:250px;border-radius:20px;background:radial-gradient(circle at 35% 30%,#ffb4d6,#a17ad7 35%,#262048 70%);display:grid;place-items:center;font-size:5rem;margin:auto;box-shadow:0 15px 60px #ff77b725}
+.song-content{text-align:center}
+.equalizer{display:flex;justify-content:center;gap:5px;height:28px;align-items:end;margin:20px}
+.equalizer span{width:5px;height:10px;border-radius:5px;background:var(--pink)}
+.equalizer.playing span{animation:equal .6s ease-in-out infinite alternate}
+.equalizer span:nth-child(2n){animation-delay:.2s}
+.equalizer span:nth-child(3n){animation-delay:.4s}
+.game{border-color:#ff77b777}
+.game-buttons{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:25px 0}
+.game-button{min-width:125px;padding:14px 22px;border:1px solid var(--pink);border-radius:15px;background:#ff77b713;color:var(--white);font-weight:700;transition:transform .15s}
+#game-message{min-height:48px;text-align:center;color:var(--pink);font-family:'Caveat',cursive;font-size:1.5rem}
+#rage-score{text-align:center;font-size:.8rem;color:var(--muted)}
+.timeline{border-left:1px solid #ff77b766;margin-left:8px;padding-left:25px}
+.timeline-item{position:relative;padding:0 0 25px}
+.timeline-item:before{content:"♡";position:absolute;left:-37px;top:0;color:var(--pink);background:var(--night);font-size:1.1rem}
+.timeline-item h3{margin-bottom:6px;color:var(--pink);font-size:1rem}
+.timeline-item p{margin-bottom:0;font-size:.9rem}
+.promise{text-align:center}
+.big-heart{font-size:4rem;color:var(--pink);animation:beat 1.5s infinite}
+#promise-text{min-height:65px;font-family:'Caveat',cursive;font-size:1.8rem;color:var(--light)}
+footer{text-align:center;padding:35px 20px;border-top:1px solid #ff77b725;color:var(--muted);font-size:.8rem}
+footer .script{font-size:1.5rem}
+#top{position:fixed;bottom:20px;right:20px;z-index:15;width:45px;height:45px;border-radius:50%;border:1px solid #ff77b777;background:#151326dd;color:var(--pink);font-size:1.3rem}
+.floating-heart{position:fixed;z-index:99;pointer-events:none;color:var(--pink);animation:rise 1.6s ease-out forwards}
+@keyframes float{50%{transform:translateY(-10px)}}
+@keyframes bob{50%{transform:translateY(7px)}}
+@keyframes beat{50%{transform:scale(1.13)}}
+@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes rise{to{transform:translateY(-140px) rotate(25deg);opacity:0}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes equal{to{height:27px}}
+@media(max-width:850px){nav{align-items:flex-start;flex-direction:column;gap:10px}.navlinks{justify-content:flex-start;gap:12px}.photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.three{grid-template-columns:1fr}}
+@media(max-width:560px){section{padding:60px 0}.two{grid-template-columns:1fr}.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{letter-spacing:-1px}.card{padding:20px}}
 </style>
 </head>
 
@@ -219,562 +119,416 @@ footer .script {font-size:1.5rem}
 <canvas id="stars"></canvas>
 
 <nav>
-  <a class="brand" href="#home" style="text-decoration:none">♡ Savanna's Universe</a>
-  <div class="navlinks">
-    <a href="#home">Home</a>
-    <a href="#letter">My Letter</a>
-    <a href="#gallery">Our Gallery</a>
-    <a href="#song">Our Song</a>
-    <a href="#game">Rage Game</a>
-    <a href="#memories">Our Story</a>
-  </div>
+<a class="brand" href="#home">♡ Savanna's Universe</a>
+<div class="navlinks">
+<a href="#home">Home</a><a href="#letter">My Letter</a>
+<a href="#gallery">Savanna Museum</a><a href="#song">Our Song</a>
+<a href="#game">Rage Game</a><a href="#promises">Promises</a>
+</div>
 </nav>
 
 <header class="hero" id="home">
-  <div class="hero-inner">
-    <div class="orbit"><span>♡</span></div>
-    <div class="eyebrow">A tiny universe for one very special girl</div>
-    <h1>My world has<br>your name, <em>Savanna.</em></h1>
-    <p class="intro">
-      Somewhere between all the ordinary days, you became my favorite part
-      of being alive. So I built you a little corner of the internet —
-      because one letter could never hold all this love.
-    </p>
-    <div class="hero-actions">
-      <a class="pill pink" href="#letter">Open your letter ♡</a>
-      <a class="pill" href="#gallery">Enter our memories ✦</a>
-    </div>
-    <div class="scroll-note">SCROLL INTO OUR LITTLE UNIVERSE <span>⌄</span></div>
-  </div>
+<div class="hero-inner">
+<div class="orbit"><span>♡</span></div>
+<div class="eyebrow">A tiny universe for one very special girl</div>
+<h1>My world has<br>your name, <em>Savanna.</em></h1>
+<p class="intro">Somewhere between all the ordinary days, you became my favorite part of being alive. So I built you a little corner of the internet — because one letter could never hold all this love.</p>
+<div class="hero-actions">
+<a class="pill pink" href="#letter">Open your letter ♡</a>
+<a class="pill" href="#gallery">Enter the Savanna Museum ✦</a>
+</div>
+<div class="scroll-note">SCROLL INTO OUR LITTLE UNIVERSE <span>⌄</span></div>
+</div>
 </header>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span>MY FAVORITE PERSON ♡</span><span>MY SAVANNA YOELL ✦</span>
-    <span>INFINITY AND BEYOND ♡</span><span>ONLY YOU, BABY ✦</span>
-    <span>MY FAVORITE PERSON ♡</span><span>MY SAVANNA YOELL ✦</span>
-    <span>INFINITY AND BEYOND ♡</span><span>ONLY YOU, BABY ✦</span>
-  </div>
-</div>
+<div class="ticker"><div class="ticker-track">
+<span>MY FAVORITE PERSON ♡</span><span>MY SAVANNA YOELL ✦</span><span>INFINITY AND BEYOND ♡</span><span>ONLY YOU, BABY ✦</span><span>MY FAVORITE PERSON ♡</span><span>MY SAVANNA YOELL ✦</span><span>INFINITY AND BEYOND ♡</span><span>ONLY YOU, BABY ✦</span>
+</div></div>
 
 <section id="letter">
-  <div class="wrap">
-    <div class="heading">
-      <div class="eyebrow">Chapter 01 · Read slowly, baby</div>
-      <h2>A letter from my heart <span class="script">to yours.</span></h2>
-      <p>Not perfect words. Just the feelings behind them.</p>
-    </div>
-    <div class="card letter">
-      <div class="script" style="font-size:1.5rem">To my baby, Savanna Yoell ♡</div>
-      <p class="letter-text">
-        HELLOOOO BABYYYY! I just wanted to tell you how much you mean to me
-        through this small gesture, a little way of saying I LOVEEE YOUUU
-        and how much I miss you. :( You know I love you so, so, so much,
-        and I only love YOU, ONLY MY BABY, Savanna Yoell. Take care of
-        yourself po ah. I hope we keep making meaningful memories,
-        laughing at our nonsense, and growing together. I want to be
-        someone who makes your difficult days a little easier and your
-        happy days even happier.
-      </p>
-      <p class="letter-text">
-        I can't fit everything I feel into one website, but I hope this
-        reminds you that you matter to me more than these words can show.
-        Thank you for being you, baby. I love you to INFINITY AND BEYOND! ♡
-      </p>
-      <div class="signature">Forever cheering for you, baby ♡</div>
-      <button class="pill" id="secret-toggle" type="button">Psst... a hidden message ✉</button>
-      <div class="secret" id="secret-message">
-        <p class="letter-text">
-          If you're reading this, you're legally required to accept one
-          million virtual hugs, unlimited forehead kisses from the
-          universe, and a lifetime supply of reminders that you are loved.
-          No refunds. HAHAHAHA. ♡
-        </p>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="heading">
+<div class="eyebrow">Chapter 01 · Read slowly, baby</div>
+<h2>A letter from my heart <span class="script">to yours.</span></h2>
+<p>A little something for the prettiest girl in my universe.</p>
+</div>
+<div class="card letter">
+<div class="script" style="font-size:1.5rem">To my baby, Savanna Yoell ♡</div>
+<p class="letter-text">HALLOOOO LOVEEEE i just wanted to make this cus wala lang i got bored and i want to show you how much you mean to me :). BABYYYY im sorry if i suck at showing how much i love you :( Love na Love talaga kita and i hope this sitee shows how much you mean to me and how you are the best for me and you da goat. Ganda mo talaga babyyyy, Baby ko ba talaga yan? Cute cute e. Mwah mwah mwah Babyyy always know that your thoughts are always safe with me if you ever wanna open uppp. Ayaw kasi ni Baby mag overthink ka e, Yes yes I LOVE YOUUUUU</p>
+<div class="signature">I love you to INFINITY AND BEYOND ♡</div>
+<button class="pill" id="secret-toggle" type="button">Psst... a hidden message ✉</button>
+<div class="secret" id="secret-message"><p class="letter-text">Baby, you're legally required to accept unlimited virtual hugs, unlimited mwah mwah mwah, and a lifetime supply of reminders that you are loved. HAHAHAHAHA. I LOVE YOUUU, MY SAVANNA YOELL! ♡</p></div>
+</div>
+</div>
 </section>
 
 <section id="gallery">
-  <div class="wrap">
-    <div class="heading">
-      <div class="eyebrow">Chapter 02 · Little pieces of forever</div>
-      <h2>Our memory museum <span class="script">✦</span></h2>
-      <p>Ten little windows into the moments you want to keep close.</p>
-    </div>
-
-    <div class="photo-grid" id="photo-grid"></div>
-    <p class="gallery-note">
-      ♡ To add your photos, upload photo1.jpg through photo10.jpg
-      into the same GitHub repository as this HTML file.
-      You can change the captions inside the photo list in the code.
-      Tap any photo to make it bigger.
-    </p>
-  </div>
+<div class="wrap">
+<div class="heading">
+<div class="eyebrow">Chapter 02 · A museum dedicated to YOU</div>
+<h2>The Savanna Museum <span class="script">♡</span></h2>
+<p>Ten little frames, one extraordinary girl. This museum isn't about our memories. It's about the beautiful person you are, baby.</p>
+</div>
+<div class="photo-grid" id="photo-grid"></div>
+<p class="gallery-note">♡ Every picture holds a little piece of the person I adore. Every smile, every expression, every little detail reminds me that there is only one Savanna Yoell in this entire universe, and she's someone worth celebrating every single day.</p>
+<div class="grid two" style="margin-top:40px">
+<div class="card"><div class="eyebrow">Exhibit No. 001</div><h2 class="script" style="font-size:2.5rem">The prettiest smile ♡</h2><p>Your smile, baby, deserves its own entire exhibition. Seeing you happy is such a special thing. You don't even have to try to be memorable. You simply exist, and somehow, you're already someone worth writing a thousand paragraphs about.</p></div>
+<div class="card"><div class="eyebrow">Exhibit No. 002</div><h2 class="script" style="font-size:2.5rem">The girl behind the beauty ✦</h2><p>It's not just about how beautiful you are. It's about your personality, your thoughts, your humor, your little habits, and all the details that make you uniquely YOU. You're a whole person with a heart and a story that deserve to be appreciated.</p></div>
+<div class="card"><div class="eyebrow">Exhibit No. 003</div><h2 class="script" style="font-size:2.5rem">Your little universe 🌙</h2><p>You have your own way of making things feel special. Your expressions, the way you talk, the things you find funny, and the little things that make you YOU. I hope you never feel like you have to become somebody else to deserve appreciation.</p></div>
+<div class="card"><div class="eyebrow">Exhibit No. 004</div><h2 class="script" style="font-size:2.5rem">One of one. Always. 💗</h2><p>There is only one Savanna Yoell. Nobody else has your exact combination of personality, experiences, dreams, thoughts, and little quirks. You don't need to compete with anyone to be special. You are your own person, and that alone makes you worth celebrating.</p></div>
+</div>
+<div class="card promise" style="margin-top:25px">
+<div class="big-heart">♡</div>
+<h2 class="script" style="font-size:2.8rem">The masterpiece is YOU, baby.</h2>
+<p style="max-width:650px;margin:0 auto">If I could put every beautiful thing about you into these pages, I would. But ten photos, a thousand words, and an entire website could never capture every side of who you are. You deserve to be appreciated not only for how you look, but for who you are.</p>
+<p class="script" style="font-size:1.8rem">Curated with love, exclusively for Savanna Yoell. ♡</p>
+</div>
+</div>
 </section>
 
 <section id="little-things">
-  <div class="wrap">
-    <div class="heading">
-      <div class="eyebrow">Chapter 03 · Us, in little numbers</div>
-      <h2>A tiny happiness dashboard <span class="script">♡</span></h2>
-      <p>Not a measurement of love — just a few silly reminders of what makes this place special.</p>
-    </div>
-    <div class="grid three">
-      <div class="card stat">
-        <strong>∞</strong><span>Amount of love sent your way</span>
-      </div>
-      <div class="card stat">
-        <strong>24/7</strong><span>Official baby appreciation hours</span>
-      </div>
-      <div class="card stat">
-        <strong>1 of 1</strong><span>The one and only Savanna Yoell</span>
-      </div>
-    </div>
-    <div class="card" style="margin-top:22px;text-align:center">
-      <h3>Send some love into the universe</h3>
-      <p>Tap the heart. Watch the screen get a little more lovesick.</p>
-      <button class="heart-button" id="heart-burst" aria-label="Send love">♡</button>
-      <div class="meter"><div class="meter-fill"></div></div>
-      <div class="meter-caption">LOVE LEVEL: TOO MUCH TO FIT ON A SCREEN</div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="heading"><div class="eyebrow">Chapter 03 · A tiny appreciation dashboard</div><h2>Official Savanna statistics <span class="script">♡</span></h2><p>Completely unofficial, scientifically questionable, and powered by love.</p></div>
+<div class="grid three">
+<div class="card stat"><strong>∞</strong><span>Amount of love sent your way</span></div>
+<div class="card stat"><strong>24/7</strong><span>Baby appreciation hours</span></div>
+<div class="card stat"><strong>1 of 1</strong><span>The one and only Savanna Yoell</span></div>
+</div>
+<div class="card" style="margin-top:22px;text-align:center">
+<h3>Send some love into the universe</h3><p>Tap the heart and watch the screen get a little more lovesick.</p>
+<button class="heart-button" id="heart-burst" aria-label="Send love">♡</button>
+<div class="meter"><div class="meter-fill"></div></div>
+<div class="eyebrow">LOVE LEVEL: TOO MUCH TO FIT ON A SCREEN</div>
+</div>
+</div>
 </section>
 
 <section id="song">
-  <div class="wrap">
-    <div class="heading">
-      <div class="eyebrow">Chapter 04 · Our soundtrack</div>
-      <h2>If our love had a soundtrack... <span class="script">♫</span></h2>
-    </div>
-    <div class="grid two">
-      <div class="card song-content">
-        <div class="song-art">♫ ♡</div>
-        <h2 style="margin:25px 0 5px">Syempre</h2>
-        <p>Our favorite song · the Filipino guy 🎶</p>
-        <div class="equalizer" id="equalizer" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-        <p id="song-status">A little song for a very big feeling.</p>
-        <a class="pill pink song-link"
-           href="https://www.youtube.com/results?search_query=Syempre+Filipino+song"
-           target="_blank" rel="noopener noreferrer">
-           Find our song on YouTube ↗
-        </a>
-        <p style="font-size:.75rem;margin-top:15px">
-          The button opens search results so you can choose the correct recording.
-        </p>
-      </div>
-      <div class="card">
-        <div class="eyebrow">A soundtrack note</div>
-        <h2 class="script" style="font-size:2.5rem">Press play on a memory.</h2>
-        <p>
-          Some songs just sound different when they remind you of someone.
-          They become little time machines: one note, one smile, and suddenly
-          you're remembering a moment you never want to lose.
-        </p>
-        <p>
-          So this section is reserved for our song — the one that gets to
-          be part of our little universe. ♡
-        </p>
-        <button class="pill" id="music-animation" type="button">Start the music vibes ♫</button>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="heading"><div class="eyebrow">Chapter 04 · Our soundtrack</div><h2>If our love had a soundtrack... <span class="script">♫</span></h2></div>
+<div class="grid two">
+<div class="card song-content">
+<div class="song-art">♫ ♡</div>
+<h2 style="margin:25px 0 5px">Syempre</h2>
+<p>Our favorite song · the Filipino guy 🎶</p>
+<div class="equalizer" id="equalizer"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<p id="song-status">A little song for a very big feeling.</p>
+<a class="pill pink" href="https://www.youtube.com/results?search_query=Syempre+Filipino+song" target="_blank" rel="noopener noreferrer">Find our song on YouTube ↗</a>
+<p style="font-size:.75rem;margin-top:15px">Choose the correct recording from the search results.</p>
+</div>
+<div class="card">
+<div class="eyebrow">A soundtrack note</div><h2 class="script" style="font-size:2.5rem">Press play on a memory.</h2>
+<p>Some songs sound different when they remind you of someone. They become little time machines: one note, one smile, and suddenly you're remembering a feeling you never want to lose.</p>
+<p>This section is reserved for our song — the one that gets to be part of our little universe. ♡</p>
+<button class="pill" id="music-animation" type="button">Start the music vibes ♫</button>
+</div>
+</div>
+</div>
 </section>
 
 <section id="game">
-  <div class="wrap">
-    <div class="heading">
-      <div class="eyebrow">Chapter 05 · A totally unbiased experiment</div>
-      <h2>The rage-baiting laboratory <span class="script">>:)</span></h2>
-      <p>Scientific research with absolutely no scientific credibility.</p>
-    </div>
-    <div class="card game">
-      <div style="text-align:center">
-        <div class="script" style="font-size:2rem">Who loves more?</div>
-        <p>Choose wisely. The button knows what you're trying to do.</p>
-      </div>
-      <div class="game-buttons">
-        <button class="game-button" id="nigel-btn" type="button">Nigel 😎</button>
-        <button class="game-button" id="savanna-btn" type="button">Savanna 💗</button>
-      </div>
-      <div id="game-message" aria-live="polite">Hmmmm... there is only one correct answer. 👀</div>
-      <div id="rage-score">Savanna-button escape attempts: 0</div>
-      <div style="text-align:center;margin-top:15px">
-        <button class="pill" id="reset-game" type="button">Restart the experiment ↻</button>
-      </div>
-    </div>
-    <div class="card" style="margin-top:20px">
-      <h3 class="script" style="font-size:1.8rem">Bonus round: catch the heart!</h3>
-      <p>Click as many hearts as you can in 10 seconds.</p>
-      <div style="display:flex;justify-content:center;gap:14px;align-items:center;flex-wrap:wrap">
-        <button class="pill pink" id="start-heart-game" type="button">Start bonus game</button>
-        <button class="heart-button" id="catch-heart" type="button" disabled>♡</button>
-        <span id="catch-score">Score: 0</span>
-        <span id="catch-time">10s</span>
-      </div>
-      <p id="catch-message" aria-live="polite" style="text-align:center"></p>
-    </div>
-  </div>
+<div class="wrap">
+<div class="heading"><div class="eyebrow">Chapter 05 · A totally unbiased experiment</div><h2>The rage-baiting laboratory <span class="script">>:)</span></h2><p>Scientific research with absolutely no scientific credibility.</p></div>
+<div class="card game">
+<div style="text-align:center"><div class="script" style="font-size:2rem">Who loves more?</div><p>Choose wisely. The button knows what you're trying to do.</p></div>
+<div class="game-buttons"><button class="game-button" id="nigel-btn" type="button">Nigel 😎</button><button class="game-button" id="savanna-btn" type="button">Savanna 💗</button></div>
+<div id="game-message" aria-live="polite">Hmmmm... there is only one correct answer. 👀</div>
+<div id="rage-score">Savanna-button escape attempts: 0</div>
+<div style="text-align:center;margin-top:15px"><button class="pill" id="reset-game" type="button">Restart the experiment ↻</button></div>
+</div>
+<div class="card" style="margin-top:20px">
+<h3 class="script" style="font-size:1.8rem">Bonus round: catch the heart!</h3><p>Click as many hearts as you can in 10 seconds.</p>
+<div style="display:flex;justify-content:center;gap:14px;align-items:center;flex-wrap:wrap">
+<button class="pill pink" id="start-heart-game" type="button">Start bonus game</button>
+<button class="heart-button" id="catch-heart" type="button" disabled>♡</button>
+<span id="catch-score">Score: 0</span><span id="catch-time">10s</span>
+</div><p id="catch-message" aria-live="polite" style="text-align:center"></p>
+</div>
+</div>
 </section>
 
-<section id="memories">
-  <div class="wrap">
-    <div class="heading">
-      <div class="eyebrow">Chapter 06 · Our story isn't finished</div>
-      <h2>Little chapters, endless pages <span class="script">✦</span></h2>
-    </div>
-    <div class="grid two">
-      <div class="card">
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>The beginning ♡</h3>
-            <p>When an ordinary day started becoming something worth remembering.</p>
-          </div>
-          <div class="timeline-item">
-            <h3>The silly moments ✦</h3>
-            <p>The jokes, the laughter, the little things that somehow mean the most.</p>
-          </div>
-          <div class="timeline-item">
-            <h3>The growing together 🌙</h3>
-            <p>Learning each other, listening, understanding, and choosing kindness.</p>
-          </div>
-          <div class="timeline-item">
-            <h3>The pages ahead ♡</h3>
-            <p>More memories to make, more stories to tell, one day at a time.</p>
-          </div>
-        </div>
-      </div>
-      <div class="card promise">
-        <div class="big-heart">♡</div>
-        <div class="eyebrow">A little promise</div>
-        <h2>For the days ahead</h2>
-        <p id="promise-text">I'll keep finding little ways to remind you that you matter.</p>
-        <button class="pill pink" id="next-promise" type="button">Another promise ✧</button>
-      </div>
-    </div>
-  </div>
+<section id="promises">
+<div class="wrap">
+<div class="heading"><div class="eyebrow">Chapter 06 · From my heart ♡</div><h2>My promises to Baby <span class="script">💗</span></h2><p>Three promises I want to keep close to my heart.</p></div>
+<div class="card promise">
+<div class="big-heart">♡</div>
+<h2 class="script" style="font-size:2.5rem">Pinky promise, my love.</h2>
+<p id="promise-text">I Promise I will go home early after school :(</p>
+<button class="pill pink" id="next-promise" type="button">Another promise ♡</button>
+<p class="script" style="font-size:1.5rem;margin-top:25px">I LOVE YOUUU, MY SAVANNA YOELL! MWAH MWAH 💋</p>
+</div>
+</div>
 </section>
 
 <section id="finale">
-  <div class="wrap">
-    <div class="card promise" style="padding:clamp(30px,7vw,75px)">
-      <div class="eyebrow">The last page · but never the last feeling</div>
-      <h2 style="font-size:clamp(2.4rem,7vw,5rem)">Dear Savanna Yoell,</h2>
-      <p style="max-width:650px;margin:20px auto">
-        If the internet could keep a feeling, I'd leave this page open forever.
-        But even if this website disappears someday, I hope the love behind it
-        stays in the memories we make and the kindness we show each other.
-      </p>
-      <div class="script" style="font-size:2.4rem">I love you to infinity and beyond. ♡</div>
-      <button class="pill pink" id="final-surprise" type="button">One last surprise ✨</button>
-      <div class="secret" id="final-secret">
-        <p class="script" style="font-size:2rem">
-          PLOT TWIST: You are the favorite notification, the favorite person,
-          and the favorite part of this little universe. ♡
-        </p>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="card promise" style="padding:clamp(30px,7vw,75px)">
+<div class="eyebrow">The last page · but never the last feeling</div>
+<h2 style="font-size:clamp(2.4rem,7vw,5rem)">Dear Savanna Yoell,</h2>
+<p style="max-width:650px;margin:20px auto">If the internet could keep a feeling, I'd leave this page open forever. But even if this website disappears someday, I hope the love behind it stays in the memories we make and the kindness we show each other.</p>
+<div class="script" style="font-size:2.4rem">I love you to infinity and beyond. ♡</div>
+<button class="pill pink" id="final-surprise" type="button">One last surprise ✨</button>
+<div class="secret" id="final-secret"><p class="script" style="font-size:2rem">PLOT TWIST: You are the favorite notification, the favorite person, and the favorite part of this little universe. ♡</p></div>
+</div>
+</div>
 </section>
 
 <footer>
-  <div class="script">Made with a ridiculous amount of love ♡</div>
-  <p>For Savanna Yoell · a tiny universe on the internet.</p>
-  <p>Every page, every pixel, every little heart — made to make you smile.</p>
+<div class="script">Made with a ridiculous amount of love ♡</div>
+<p>For Savanna Yoell · a tiny universe on the internet.</p>
+<p>Every page, every pixel, every little heart — made to make you smile.</p>
 </footer>
 
 <button id="top" title="Back to top" aria-label="Back to top">↑</button>
-
 <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
-  <img id="lightbox-image" alt="Selected memory">
-  <div id="lightbox-caption" class="script" style="font-size:1.7rem"></div>
-  <button id="close-lightbox" type="button">Close ×</button>
+<img id="lightbox-image" alt="Selected photo">
+<div id="lightbox-caption" class="script" style="font-size:1.7rem"></div>
+<button id="close-lightbox" type="button">Close ×</button>
 </div>
 
 <script>
-// ============================================
-// 1. YOUR TEN-PHOTO GALLERY
-// Upload these image files into the same repository.
-// ============================================
-const photos = [
-  {src:"photo1.jpg",caption:"My favorite smile ♡"},
-  {src:"photo2.jpg",caption:"A little piece of us"},
-  {src:"photo3.jpg",caption:"This moment ✦"},
-  {src:"photo4.jpg",caption:"My pretty baby"},
-  {src:"photo5.jpg",caption:"One for the memories"},
-  {src:"photo6.jpg",caption:"Forever a favorite ♡"},
-  {src:"photo7.jpg",caption:"The cutest human"},
-  {src:"photo8.jpg",caption:"Another happy memory"},
-  {src:"photo9.jpg",caption:"My Savanna Yoell"},
-  {src:"photo10.jpg",caption:"To infinity and beyond"}
+// ===================================
+// TEN-PHOTO SAVANNA MUSEUM
+// Upload photo1.jpg through photo10.jpg
+// into the SAME folder as index.html.
+// ===================================
+const photos=[
+{src:"photo1.jpg",caption:"My pretty baby ♡"},
+{src:"photo2.jpg",caption:"That beautiful smile"},
+{src:"photo3.jpg",caption:"My favorite girl"},
+{src:"photo4.jpg",caption:"Pretty without even trying"},
+{src:"photo5.jpg",caption:"My favorite face ✦"},
+{src:"photo6.jpg",caption:"The girl of my dreams"},
+{src:"photo7.jpg",caption:"One of a kind ♡"},
+{src:"photo8.jpg",caption:"My beautiful Savanna"},
+{src:"photo9.jpg",caption:"A whole universe in one girl"},
+{src:"photo10.jpg",caption:"Simply, wonderfully YOU 💗"}
 ];
 
-const photoGrid = document.getElementById("photo-grid");
-photos.forEach((photo,index) => {
-  const card = document.createElement("div");
-  card.className = "photo";
-  card.tabIndex = 0;
-  card.setAttribute("role","button");
-  card.setAttribute("aria-label","Open photo: "+photo.caption);
+const photoGrid=document.getElementById("photo-grid");
+const lightbox=document.getElementById("lightbox");
 
-  const img = document.createElement("img");
-  img.src = photo.src;
-  img.alt = photo.caption;
-  img.loading = "lazy";
-  img.onerror = () => {
-    const placeholder = document.createElement("div");
-    placeholder.className = "placeholder";
-    placeholder.textContent = "♡ Add photo "+(index+1);
-    img.replaceWith(placeholder);
-  };
+photos.forEach((photo,index)=>{
+const card=document.createElement("div");
+card.className="photo";
+card.tabIndex=0;
+card.setAttribute("role","button");
+card.setAttribute("aria-label","Open "+photo.caption);
 
-  const caption = document.createElement("div");
-  caption.className = "caption";
-  caption.textContent = photo.caption;
-  card.append(img,caption);
+const img=document.createElement("img");
+img.src=photo.src;
+img.alt=photo.caption;
+img.loading="lazy";
+img.onerror=()=>{
+const placeholder=document.createElement("div");
+placeholder.className="placeholder";
+placeholder.textContent="♡ Add photo "+(index+1);
+img.replaceWith(placeholder);
+};
 
-  const open = () => {
-    const currentImage = card.querySelector("img");
-    if (!currentImage) return;
-    document.getElementById("lightbox-image").src = currentImage.src;
-    document.getElementById("lightbox-caption").textContent = photo.caption;
-    document.getElementById("lightbox").classList.add("open");
-  };
-  card.addEventListener("click",open);
-  card.addEventListener("keydown",e => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      open();
-    }
-  });
-  photoGrid.appendChild(card);
+const caption=document.createElement("div");
+caption.className="caption";
+caption.textContent=photo.caption;
+card.append(img,caption);
+
+function openPhoto(){
+const image=card.querySelector("img");
+if(!image)return;
+document.getElementById("lightbox-image").src=image.src;
+document.getElementById("lightbox-caption").textContent=photo.caption;
+lightbox.classList.add("open");
+}
+card.addEventListener("click",openPhoto);
+card.addEventListener("keydown",e=>{
+if(e.key==="Enter"||e.key===" "){e.preventDefault();openPhoto();}
+});
+photoGrid.appendChild(card);
 });
 
-const lightbox = document.getElementById("lightbox");
-function closeLightbox() {
-  lightbox.classList.remove("open");
-}
+function closeLightbox(){lightbox.classList.remove("open");}
 document.getElementById("close-lightbox").addEventListener("click",closeLightbox);
-lightbox.addEventListener("click",e => {
-  if (e.target === lightbox) closeLightbox();
+lightbox.addEventListener("click",e=>{if(e.target===lightbox)closeLightbox();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeLightbox();});
+
+// HIDDEN MESSAGES
+document.getElementById("secret-toggle").addEventListener("click",()=>{
+document.getElementById("secret-message").classList.toggle("show");
 });
-document.addEventListener("keydown",e => {
-  if (e.key === "Escape") closeLightbox();
+document.getElementById("final-surprise").addEventListener("click",()=>{
+document.getElementById("final-secret").classList.toggle("show");
 });
 
-// ============================================
-// 2. SECRET LETTERS
-// ============================================
-document.getElementById("secret-toggle").addEventListener("click",() => {
-  document.getElementById("secret-message").classList.toggle("show");
-});
-document.getElementById("final-surprise").addEventListener("click",() => {
-  document.getElementById("final-secret").classList.toggle("show");
-});
-
-// ============================================
-// 3. FLOATING HEARTS
-// ============================================
-function popHeart(x,y) {
-  const heart = document.createElement("span");
-  heart.className = "floating-heart";
-  heart.textContent = ["♡","♥","✦","💗"][Math.floor(Math.random()*4)];
-  heart.style.left = x+"px";
-  heart.style.top = y+"px";
-  heart.style.fontSize = (16+Math.random()*25)+"px";
-  document.body.appendChild(heart);
-  setTimeout(() => heart.remove(),1700);
+// FLOATING HEARTS
+function popHeart(x,y){
+const heart=document.createElement("span");
+heart.className="floating-heart";
+heart.textContent=["♡","♥","✦","💗"][Math.floor(Math.random()*4)];
+heart.style.left=x+"px";
+heart.style.top=y+"px";
+heart.style.fontSize=(16+Math.random()*25)+"px";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),1700);
 }
-document.getElementById("heart-burst").addEventListener("click",e => {
-  const r = e.currentTarget.getBoundingClientRect();
-  for(let i=0;i<15;i++) {
-    popHeart(r.left+r.width/2+(Math.random()-.5)*140,
-             r.top+r.height/2+(Math.random()-.5)*50);
-  }
+
+document.getElementById("heart-burst").addEventListener("click",e=>{
+const r=e.currentTarget.getBoundingClientRect();
+for(let i=0;i<15;i++){
+popHeart(r.left+r.width/2+(Math.random()-.5)*140,r.top+r.height/2+(Math.random()-.5)*50);
+}
 });
 
-// ============================================
-// 4. SONG VIBES ANIMATION
-// This animates the page; it does not play audio.
-// ============================================
-document.getElementById("music-animation").addEventListener("click",() => {
-  const eq = document.getElementById("equalizer");
-  const playing = eq.classList.toggle("playing");
-  document.getElementById("song-status").textContent = playing
-    ? "Vibing to our song in spirit ♡ Open YouTube to play it!"
-    : "A little song for a very big feeling.";
+// SONG VIBES ANIMATION; THIS DOES NOT PLAY AUDIO
+document.getElementById("music-animation").addEventListener("click",()=>{
+const eq=document.getElementById("equalizer");
+const playing=eq.classList.toggle("playing");
+document.getElementById("song-status").textContent=playing
+?"Vibing to our song in spirit ♡ Open YouTube to play it!"
+:"A little song for a very big feeling.";
 });
 
-// ============================================
-// 5. RAGE-BAITING GAME
-// ============================================
-let escapeCount = 0;
-let dodges = 0;
-const savBtn = document.getElementById("savanna-btn");
-const nigelBtn = document.getElementById("nigel-btn");
-const gameMessage = document.getElementById("game-message");
-const rageScore = document.getElementById("rage-score");
-const teasing = [
-  "OHHH? Trying to choose Savanna? Interesting. 👀",
-  "Wrong answer detected. Please try again. HAHAHAHA",
-  "The system has reviewed your decision and disagrees.",
-  "SAVANNA BUTTON HAS LEFT THE CHAT 💨",
-  "Breaking news: Nigel is filing a complaint.",
-  "Are you sure? Think about your answer carefully. 😭"
+// RAGE-BAITING GAME
+let escapeCount=0;
+let dodges=0;
+const savBtn=document.getElementById("savanna-btn");
+const gameMessage=document.getElementById("game-message");
+const rageScore=document.getElementById("rage-score");
+const teasing=[
+"OHHH? Trying to choose Savanna? Interesting. 👀",
+"Wrong answer detected. Please try again. HAHAHAHA",
+"The system has reviewed your decision and disagrees.",
+"SAVANNA BUTTON HAS LEFT THE CHAT 💨",
+"Breaking news: Nigel is filing a complaint.",
+"Are you sure? Think about your answer carefully. 😭"
 ];
 
-function dodgeButton() {
-  dodges++;
-  escapeCount++;
-  gameMessage.textContent = teasing[Math.floor(Math.random()*teasing.length)];
-  rageScore.textContent = "Savanna-button escape attempts: "+escapeCount;
-
-  // On phones, keep the button within the visible screen.
-  const maxX = Math.max(0,Math.min(180,window.innerWidth/2-100));
-  const maxY = 100;
-  const x = (Math.random()-.5)*maxX*2;
-  const y = (Math.random()-.5)*maxY*2;
-  savBtn.style.transform = `translate(${x}px,${y}px) rotate(${Math.random()*12-6}deg)`;
-  savBtn.style.background = dodges%3===0 ? "#ff77b755" : "#b9a0ff22";
+function dodgeButton(){
+dodges++;
+escapeCount++;
+gameMessage.textContent=teasing[Math.floor(Math.random()*teasing.length)];
+rageScore.textContent="Savanna-button escape attempts: "+escapeCount;
+const maxX=Math.max(0,Math.min(150,window.innerWidth/2-100));
+const x=(Math.random()-.5)*maxX*2;
+const y=(Math.random()-.5)*100;
+savBtn.style.transform=`translate(${x}px,${y}px) rotate(${Math.random()*12-6}deg)`;
+savBtn.style.background=dodges%3===0?"#ff77b755":"#b9a0ff22";
 }
-savBtn.addEventListener("pointerenter",e => {
-  if (e.pointerType === "mouse") dodgeButton();
+
+savBtn.addEventListener("pointerenter",e=>{
+if(e.pointerType==="mouse")dodgeButton();
 });
-savBtn.addEventListener("click",() => {
-  dodgeButton();
-  gameMessage.textContent = "YOU ACTUALLY GOT IT?! Fine... Savanna wins this round. ♡";
+savBtn.addEventListener("click",()=>{
+dodgeButton();
+gameMessage.textContent="YOU ACTUALLY GOT IT?! Fine... Savanna wins this round. ♡";
 });
-nigelBtn.addEventListener("click",() => {
-  gameMessage.textContent = "CORRECT! Nigel wins the totally unbiased experiment. 🏆";
-  for(let i=0;i<12;i++) {
-    setTimeout(() => popHeart(
-      window.innerWidth/2+(Math.random()-.5)*180,
-      window.innerHeight/2+(Math.random()-.5)*100
-    ),i*60);
-  }
+document.getElementById("nigel-btn").addEventListener("click",()=>{
+gameMessage.textContent="CORRECT! Nigel wins the totally unbiased experiment. 🏆";
+for(let i=0;i<12;i++){
+setTimeout(()=>popHeart(window.innerWidth/2+(Math.random()-.5)*180,window.innerHeight/2+(Math.random()-.5)*100),i*60);
+}
 });
-document.getElementById("reset-game").addEventListener("click",() => {
-  escapeCount=0;
-  dodges=0;
-  savBtn.style.transform="";
-  savBtn.style.background="";
-  rageScore.textContent="Savanna-button escape attempts: 0";
-  gameMessage.textContent="Hmmmm... there is only one correct answer. 👀";
+document.getElementById("reset-game").addEventListener("click",()=>{
+escapeCount=0;
+dodges=0;
+savBtn.style.transform="";
+savBtn.style.background="";
+rageScore.textContent="Savanna-button escape attempts: 0";
+gameMessage.textContent="Hmmmm... there is only one correct answer. 👀";
 });
 
-// ============================================
-// 6. BONUS HEART-CATCHING GAME
-// ============================================
-let catchScore = 0;
-let timeLeft = 10;
-let gameActive = false;
-let gameTimer = null;
-const catchBtn = document.getElementById("catch-heart");
+// BONUS HEART-CATCHING GAME
+let catchScore=0;
+let timeLeft=10;
+let gameActive=false;
+let gameTimer=null;
+const catchBtn=document.getElementById("catch-heart");
 
-document.getElementById("start-heart-game").addEventListener("click",() => {
-  if (gameActive) return;
-  catchScore=0;
-  timeLeft=10;
-  gameActive=true;
-  catchBtn.disabled=false;
-  catchBtn.style.opacity="1";
-  document.getElementById("catch-score").textContent="Score: 0";
-  document.getElementById("catch-time").textContent="10s";
-  document.getElementById("catch-message").textContent="CATCH THOSE HEARTS! ♡";
-
-  gameTimer=setInterval(() => {
-    timeLeft--;
-    document.getElementById("catch-time").textContent=timeLeft+"s";
-    if(timeLeft<=0) {
-      clearInterval(gameTimer);
-      gameActive=false;
-      catchBtn.disabled=true;
-      document.getElementById("catch-message").textContent=
-        "Time's up! You caught "+catchScore+" hearts. Savanna deserves every one. ♡";
-    }
-  },1000);
-});
-catchBtn.addEventListener("click",() => {
-  if(!gameActive) return;
-  catchScore++;
-  document.getElementById("catch-score").textContent="Score: "+catchScore;
-  const x = 10+Math.random()*70;
-  catchBtn.style.transform=`translate(${x-40}px,${Math.random()*35-17}px) rotate(${Math.random()*35-17}deg)`;
-  popHeart(Math.random()*window.innerWidth,window.innerHeight*.6);
+document.getElementById("start-heart-game").addEventListener("click",()=>{
+if(gameActive)return;
+catchScore=0;
+timeLeft=10;
+gameActive=true;
+catchBtn.disabled=false;
+document.getElementById("catch-score").textContent="Score: 0";
+document.getElementById("catch-time").textContent="10s";
+document.getElementById("catch-message").textContent="CATCH THOSE HEARTS! ♡";
+gameTimer=setInterval(()=>{
+timeLeft--;
+document.getElementById("catch-time").textContent=timeLeft+"s";
+if(timeLeft<=0){
+clearInterval(gameTimer);
+gameActive=false;
+catchBtn.disabled=true;
+document.getElementById("catch-message").textContent="Time's up! You caught "+catchScore+" hearts. Savanna deserves every one. ♡";
+}
+},1000);
 });
 
-// ============================================
-// 7. ROTATING PROMISES
-// ============================================
-const promises = [
-  "I'll keep finding little ways to remind you that you matter. ♡",
-  "I'll keep learning how to listen and understand you better.",
-  "I'll celebrate your wins and encourage you through hard days.",
-  "I'll make room for laughter, honesty, patience, and kindness.",
-  "I'll never stop being grateful for the memories we make.",
-  "One day at a time, one memory at a time, with love. ✦"
+catchBtn.addEventListener("click",()=>{
+if(!gameActive)return;
+catchScore++;
+document.getElementById("catch-score").textContent="Score: "+catchScore;
+catchBtn.style.transform=`translate(${Math.random()*70-35}px,${Math.random()*35-17}px) rotate(${Math.random()*35-17}deg)`;
+popHeart(Math.random()*window.innerWidth,window.innerHeight*.6);
+});
+
+// YOUR THREE PROMISES
+const promises=[
+"I Promise I will go home early after school :(",
+"I Promise to open up to my Baby when i feel that my heart is heavy",
+"I Promise to Love my Baby to Infinity and Beyond"
 ];
 let promiseIndex=0;
-document.getElementById("next-promise").addEventListener("click",() => {
-  promiseIndex=(promiseIndex+1)%promises.length;
-  document.getElementById("promise-text").textContent=promises[promiseIndex];
+
+document.getElementById("next-promise").addEventListener("click",()=>{
+promiseIndex=(promiseIndex+1)%promises.length;
+document.getElementById("promise-text").textContent=promises[promiseIndex];
 });
 
-// ============================================
-// 8. BACK TO TOP
-// ============================================
-document.getElementById("top").addEventListener("click",() => {
-  window.scrollTo({top:0,behavior:"smooth"});
+// BACK TO TOP
+document.getElementById("top").addEventListener("click",()=>{
+window.scrollTo({top:0,behavior:"smooth"});
 });
 
-// ============================================
-// 9. ANIMATED STARFIELD
-// ============================================
-const canvas = document.getElementById("stars");
-const ctx = canvas.getContext("2d");
-let stars = [];
-let width = 0;
-let height = 0;
+// ANIMATED STARFIELD
+const canvas=document.getElementById("stars");
+const ctx=canvas.getContext("2d");
+let stars=[];
+let width=0,height=0;
 
-function resizeStars() {
-  const dpr = Math.min(window.devicePixelRatio||1,2);
-  width=window.innerWidth;
-  height=window.innerHeight;
-  canvas.width=width*dpr;
-  canvas.height=height*dpr;
-  canvas.style.width=width+"px";
-  canvas.style.height=height+"px";
-  ctx.setTransform(dpr,0,0,dpr,0,0);
-  stars=Array.from({length:Math.min(150,Math.floor(width/7))},() => ({
-    x:Math.random()*width,
-    y:Math.random()*height,
-    r:Math.random()*1.6+.2,
-    alpha:Math.random(),
-    speed:Math.random()*.008+.002
-  }));
+function resizeStars(){
+const dpr=Math.min(window.devicePixelRatio||1,2);
+width=window.innerWidth;
+height=window.innerHeight;
+canvas.width=width*dpr;
+canvas.height=height*dpr;
+canvas.style.width=width+"px";
+canvas.style.height=height+"px";
+ctx.setTransform(dpr,0,0,dpr,0,0);
+stars=Array.from({length:Math.min(150,Math.floor(width/7))},()=>({
+x:Math.random()*width,y:Math.random()*height,
+r:Math.random()*1.6+.2,alpha:Math.random(),speed:Math.random()*.008+.002
+}));
 }
-function drawStars() {
-  ctx.clearRect(0,0,width,height);
-  stars.forEach(s => {
-    s.alpha+=s.speed;
-    const opacity=.25+Math.abs(Math.sin(s.alpha))*.65;
-    ctx.beginPath();
-    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-    ctx.fillStyle=`rgba(255,210,237,${opacity})`;
-    ctx.fill();
-  });
-  requestAnimationFrame(drawStars);
+
+function drawStars(){
+ctx.clearRect(0,0,width,height);
+stars.forEach(s=>{
+s.alpha+=s.speed;
+const opacity=.25+Math.abs(Math.sin(s.alpha))*.65;
+ctx.beginPath();
+ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+ctx.fillStyle=`rgba(255,210,237,${opacity})`;
+ctx.fill();
+});
+requestAnimationFrame(drawStars);
 }
 window.addEventListener("resize",resizeStars);
 resizeStars();
 drawStars();
 
-// A tiny heart follows each click on the page.
-document.addEventListener("click",e => {
-  if(e.target.closest("button,a,.photo")) return;
-  if(Math.random()>.55) popHeart(e.clientX,e.clientY);
+document.addEventListener("click",e=>{
+if(e.target.closest("button,a,.photo"))return;
+if(Math.random()>.55)popHeart(e.clientX,e.clientY);
 });
 </script>
 </body>
